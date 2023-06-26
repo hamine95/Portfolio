@@ -60,7 +60,14 @@ window.onload=function(){
     let SectionBtns=document.getElementsByClassName("control")
     for(let i=0;i<SectionBtns.length;i++)
     {
+       if(SectionBtns.item(i).getAttribute("id")=="switch-mode")
+       {
+          continue
+       }
+        
+
         SectionBtns.item(i).addEventListener("click",()=>{
+
             document.getElementsByClassName("active-btn")[0].classList.remove("active-btn")
             SectionBtns.item(i).classList.add("active-btn")
             const section=SectionBtns.item(i).getElementsByTagName("i")[0]
@@ -70,5 +77,8 @@ window.onload=function(){
     
 
     setTimeout(TypeWriter,500);
+    document.getElementById("switch-mode").addEventListener("click",()=>{
+        document.body.classList.toggle("light-mode")
+    })
     
 }
