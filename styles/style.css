@@ -383,6 +383,89 @@ section {
   transform: translate(-50%, -50%);
 }
 
+@keyframes text-fall {
+  0% {
+    transform-origin: 0 50%;
+    animation-timing-function: ease-in-out;
+  }
+  15% {
+    transform: rotate3d(0, 0, 1, 130deg);
+  }
+  20% {
+    transform: rotate3d(0, 0, 1, 80deg);
+  }
+  30% {
+    transform: rotate3d(0, 0, 1, 115deg);
+  }
+  40% {
+    transform: rotate3d(0, 0, 1, 85deg);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, 107deg) translate3d(400px, 0, 0);
+  }
+  100% {
+    transform: rotateZ(102.5deg) translate3d(400px, 0, 0);
+  }
+}
+.btn-con {
+  border: 1px solid var(--color-secondary);
+  align-self: flex-start;
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.btn-con ::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(0%);
+  height: 100%;
+  width: 10%;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+.btn-con:hover {
+  transition: all 0.4s ease-in;
+}
+.btn-con:hover ::after {
+  content: "";
+  z-index: -1;
+  background-color: var(--color-secondary);
+  width: 100%;
+  transform: translateX(0%);
+  transition: all 0.4s ease-in;
+}
+.btn-con:hover i {
+  animation: text-fall 2s 0.5s ease-in-out both;
+}
+.btn-con .btn-text {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  z-index: 1;
+}
+.btn-con .btn-icon {
+  border-radius: 50%;
+  z-index: 1;
+  background-color: var(--color-white);
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-con .btn-icon i {
+  z-index: 1;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
 .contact {
   display: none;
 }
@@ -394,10 +477,10 @@ section {
 
 @keyframes slidingOffTop {
   0% {
-    margin-top: -770px;
+    transform: translateY(-100%) scaleY(0);
   }
   100% {
-    margin-top: 0px;
+    transform: translateY(0%) scaleY(1);
   }
 }
 .control {
@@ -409,6 +492,7 @@ section {
 }
 .control i {
   margin: 18px;
+  color: var(--color-grey-2);
 }
 
 img { /* Safari 6.0 - 9.0 */
@@ -418,18 +502,36 @@ img { /* Safari 6.0 - 9.0 */
   margin: 40px;
 }
 
+.Home-Content {
+  display: flex;
+  width: 600px;
+  height: 100%;
+  padding-top: 50px;
+  margin-bottom: 120px;
+  margin-top: 50px;
+  margin-left: 80px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  overflow: hidden;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
 .Presentation {
   margin: 0;
   display: inline;
-  padding: 0;
-  font-size: 4.5rem;
+  height: 40%;
+  font-size: 3.8rem;
   font-family: "Oswald", sans-serif;
   white-space: initial;
 }
 
 .Motivational {
-  padding: 20px;
+  align-self: flex-start;
   word-wrap: break-word;
+  margin-bottom: 50px;
 }
 
 #cursor {
@@ -447,23 +549,7 @@ img { /* Safari 6.0 - 9.0 */
 }
 main {
   display: flex;
-  justify-content: center;
   flex: 1;
-}
-
-.Home-Content {
-  display: flex;
-  width: 600px;
-  margin-bottom: 120px;
-  margin-top: 50px;
-  margin-left: 80px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  word-wrap: break-word;
-  overflow: hidden;
-  white-space: normal;
-  overflow-wrap: break-word;
 }
 
 img:hover { /* Safari 6.0 - 9.0 */
@@ -478,4 +564,22 @@ img:hover { /* Safari 6.0 - 9.0 */
 
 .active-btn {
   background-color: var(--color-secondary);
+  transition: all 0.4s ease-in-out;
+}
+.active-btn i {
+  color: var(--color-white);
+}
+
+.ImageContainer {
+  border-radius: 15px;
+  width: 40%;
+  height: 80%;
+  position: relative;
+}
+.ImageContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
