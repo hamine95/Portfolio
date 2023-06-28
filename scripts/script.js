@@ -55,7 +55,8 @@ function ShowSection(section)
         return
     }
 }
-window.onload=function(){
+window.onload= function(){
+    let ProfileImage=document.querySelector(".ImageContainer img")
     
     let SectionBtns=document.getElementsByClassName("control")
     for(let i=0;i<SectionBtns.length;i++)
@@ -75,7 +76,6 @@ window.onload=function(){
         })
     }
     
-
     setTimeout(TypeWriter,900);
     document.getElementById("switch-mode").addEventListener("click",()=>{
         document.body.classList.toggle("light-mode")
