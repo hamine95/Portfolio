@@ -76,7 +76,7 @@ window.onload=function(){
     }
     
 
-    setTimeout(TypeWriter,500);
+    setTimeout(TypeWriter,900);
     document.getElementById("switch-mode").addEventListener("click",()=>{
         document.body.classList.toggle("light-mode")
     })
