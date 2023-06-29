@@ -11,6 +11,15 @@
   list-style: none;
 }
 
+.signature {
+  font-family: "SignatureFont";
+  position: fixed;
+  top: 0%;
+  left: 0;
+  font-size: 3rem;
+  opacity: 0.1;
+}
+
 :root {
   --color-primary:#191d2b;
   --color-secondary:#27AE60;
@@ -150,6 +159,37 @@ main {
   background: linear-gradient(80deg, var(--color-secondary) 0%, var(--color-secondary) 21%, var(--color-primary) 21%, var(--color-primary) 100%);
 }
 
+.hand {
+  display: inline-block;
+  animation: waving 2.5s infinite;
+}
+
+@keyframes waving {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .ImageContainer {
   width: 40vw;
   height: 90vh;
@@ -588,14 +628,7 @@ main {
 }
 .contact.active .main-title h2 {
   color: var(--color-secondary);
-}
-.contact.active .signature {
-  font-family: "SignatureFont";
-  position: fixed;
-  top: 0%;
-  left: 0;
-  font-size: 3rem;
-  opacity: 0.1;
+  margin-bottom: 80px;
 }
 .contact.active .container {
   display: flex;
@@ -630,6 +663,7 @@ main {
 }
 .contact.active .logo-container .logo i {
   font-size: 2rem;
+  color: white;
 }
 .contact.active .logo-container .github {
   background-color: #000;
@@ -647,23 +681,7 @@ main {
   background-color: #0047AB;
 }
 
-@media screen and (max-width: 600px) {
-  .home.active {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    background: none;
-    margin-bottom: 70px;
-  }
-  .ImageContainer {
-    width: 70vw;
-  }
-  .Home-Content {
-    margin: 0;
-    align-self: center;
-    padding-left: 10px;
-  }
+@media screen and (max-width: 950px) {
   header {
     z-index: 2;
     position: fixed;
@@ -690,6 +708,34 @@ main {
   header .control i {
     margin: 2rem;
   }
+  .signature {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 1006px) {
+  .Home-Content {
+    margin-right: 5rem;
+  }
+}
+@media screen and (max-width: 970px) {
+  .home.active {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    margin-bottom: 70px;
+  }
+  .ImageContainer {
+    width: 70vw;
+  }
+  .Home-Content {
+    margin: 0;
+    align-self: center;
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
   .about.active {
     padding: 0;
     margin-top: 20px;

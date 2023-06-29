@@ -11,6 +11,14 @@
     box-sizing: border-box;
     list-style: none;
 }
+.signature{
+    font-family: 'SignatureFont';
+    position: fixed;
+    top: 0%;
+    left: 0 ;
+    font-size: 3rem;
+    opacity: 0.1;
+}
 :root{
     --color-primary:#191d2b;
     --color-secondary:#27AE60;
@@ -153,6 +161,20 @@ main{
     var(--color-primary) 21%,
     var(--color-primary) 100%
   );
+}
+.hand{
+    display: inline-block;
+    animation: waving 2.5s infinite;
+}
+@keyframes waving {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) } 
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  
+  100% { transform: rotate( 0.0deg) }
 }
 .ImageContainer{
     width: 40vw;
@@ -621,16 +643,9 @@ main{
     height: 100vh;
     .main-title h2{
         color: var(--color-secondary);
-        
+        margin-bottom: 80px;
     }
-    .signature{
-        font-family: 'SignatureFont';
-        position: fixed;
-        top: 0%;
-        left: 0 ;
-        font-size: 3rem;
-        opacity: 0.1;
-    }
+    
     .container{
         display: flex;
         gap: 80px;
@@ -663,6 +678,7 @@ main{
 
             i{
                 font-size: 2rem;
+                color: white;
             }
         }
         .github{

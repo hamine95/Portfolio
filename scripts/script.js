@@ -23,7 +23,11 @@ function TypeWriter()
         setTimeout(TypeWriter,Fast)
        else 
        setTimeout(TypeWriter,Slow)
+    }else{
+        var PresentationParagraph= document.getElementById("Present")
+        PresentationParagraph.innerHTML="Hi, I'm Amine <span class='hand'>👋</span> A Desktop and Web Developer."
     }
+   
 }
 function ShowSection(section)
 {

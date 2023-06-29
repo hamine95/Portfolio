@@ -1,20 +1,4 @@
-@media screen and (max-width:600px) {
-    .home.active{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content:center;
-        align-items: center;
-        background: none;
-        margin-bottom: 70px;
-    }
-    .ImageContainer{
-        width: 70vw;
-    }
-    .Home-Content{
-        margin: 0;
-        align-self: center;
-        padding-left: 10px;
-    }
+@media screen and (max-width:950px) {
     header{
         z-index: 2;
         position: fixed;
@@ -44,6 +28,36 @@
         }
         
     }
+    .signature{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:1006px) {
+    .Home-Content {
+        margin-right: 5rem;
+    }
+}
+@media screen and (max-width:970px) {
+    .home.active{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content:center;
+        align-items: center;
+        background: none;
+        margin-bottom: 70px;
+    }
+    .ImageContainer{
+        width: 70vw;
+    }
+    .Home-Content{
+        margin: 0;
+        align-self: center;
+        padding-left: 10px;
+    }
+}
+@media screen and (max-width:600px) {
+    
+   
     
     .about.active{
         padding: 0;
