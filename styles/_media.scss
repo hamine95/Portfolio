@@ -74,4 +74,12 @@
     .portfolio.active {
         margin-bottom: 80px;
     }
+
+    .contact.active {
+        margin-top: 80px;
+        .container{
+            flex-direction: column-reverse;
+        }
+    }
+    
 }

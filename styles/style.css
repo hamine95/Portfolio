@@ -608,7 +608,6 @@ main {
 }
 .contact.active .container .img img {
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -719,5 +718,11 @@ main {
   }
   .portfolio.active {
     margin-bottom: 80px;
+  }
+  .contact.active {
+    margin-top: 80px;
+  }
+  .contact.active .container {
+    flex-direction: column-reverse;
   }
 }/*# sourceMappingURL=style.css.map */
