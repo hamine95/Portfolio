@@ -1,0 +1,46 @@
+@media screen and (max-width:600px) {
+    .home.active{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content:center;
+        align-items: center;
+        background: none;
+    }
+    .ImageContainer{
+        width: 70vw;
+    }
+    .Home-Content{
+        margin: 0;
+        align-self: center;
+    }
+    header{
+        z-index: 2;
+        position: fixed;
+        flex-direction: row;
+        width: 100%;
+        min-height: 10%;
+        justify-content: center;
+        align-items: flex-start;
+        bottom: 0;
+        right: 0;
+        height: 10%;
+        padding: 0%;
+
+        background-color: var(--color-grey-4);
+        .mode{
+            margin: 0;
+            padding: 0%;
+        }
+        
+        .control {
+            border-radius: 0%;
+            margin: 0%;
+            height: 100%;
+            i{
+                margin: 2rem;
+            }
+        }
+        
+    }
+    
+}

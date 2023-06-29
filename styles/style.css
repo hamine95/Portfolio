@@ -53,6 +53,7 @@ a {
 }
 
 header {
+  z-index: 1;
   position: absolute;
   display: flex;
   align-items: center;
@@ -63,6 +64,18 @@ header {
   min-height: 100%;
   overflow: hidden;
   color: var(--color-white);
+}
+
+.control {
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: var(--color-grey-4);
+  margin: 10px;
+  cursor: pointer;
+}
+.control i {
+  margin: 18px;
+  color: var(--color-grey-2);
 }
 
 .active-btn {
@@ -94,18 +107,6 @@ section {
     transform: translateY(0%) scaleY(1);
   }
 }
-.control {
-  border: 1px solid transparent;
-  border-radius: 50%;
-  background-color: var(--color-grey-4);
-  margin: 10px;
-  cursor: pointer;
-}
-.control i {
-  margin: 18px;
-  color: var(--color-grey-2);
-}
-
 .main-title {
   position: relative;
   text-align: center;
@@ -159,7 +160,7 @@ main {
 }
 .ImageContainer #img2 {
   visibility: visible;
-  animation: fadeIn 5s infinite;
+  animation: fadeIn 7s infinite;
 }
 
 @keyframes fadeIn {
@@ -575,4 +576,47 @@ main {
 .contact.active {
   background-color: brown;
   display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  .home.active {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background: none;
+  }
+  .ImageContainer {
+    width: 70vw;
+  }
+  .Home-Content {
+    margin: 0;
+    align-self: center;
+  }
+  header {
+    z-index: 2;
+    position: fixed;
+    flex-direction: row;
+    width: 100%;
+    min-height: 10%;
+    justify-content: center;
+    align-items: flex-start;
+    bottom: 0;
+    right: 0;
+    height: 10%;
+    padding: 0%;
+    background-color: var(--color-grey-4);
+  }
+  header .mode {
+    margin: 0;
+    padding: 0%;
+  }
+  header .control {
+    border-radius: 0%;
+    margin: 0%;
+    height: 100%;
+  }
+  header .control i {
+    margin: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */

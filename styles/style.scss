@@ -50,6 +50,7 @@ a{
     font-family: inherit;
 }
 header{
+    z-index: 1;
     position: absolute;
     display: flex;
     align-items: center;
@@ -60,6 +61,17 @@ header{
     min-height: 100%;
     overflow: hidden;
     color:var(--color-white);
+}
+.control{
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: var(--color-grey-4);
+    margin: 10px;
+    cursor: pointer;
+    i{
+        margin: 18px;
+        color: var(--color-grey-2);
+    }
 }
 .active-btn{
     background-color: var(--color-secondary);
@@ -94,17 +106,7 @@ section {
         transform:translateY(0%) scaleY(1);
     }
 }
-.control{
-    border: 1px solid transparent;
-    border-radius: 50%;
-    background-color: var(--color-grey-4);
-    margin: 10px;
-    cursor: pointer;
-    i{
-        margin: 18px;
-        color: var(--color-grey-2);
-    }
-}
+
 .main-title{
     
     position: relative;
@@ -161,7 +163,7 @@ main{
     }
     #img2{
         visibility: visible;
-        animation: fadeIn 5s infinite;
+        animation: fadeIn 7s infinite;
     }
     
 }
