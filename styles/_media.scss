@@ -5,6 +5,7 @@
         justify-content:center;
         align-items: center;
         background: none;
+        margin-bottom: 70px;
     }
     .ImageContainer{
         width: 70vw;
@@ -12,6 +13,7 @@
     .Home-Content{
         margin: 0;
         align-self: center;
+        padding-left: 10px;
     }
     header{
         z-index: 2;
@@ -43,4 +45,23 @@
         
     }
     
+    .about.active{
+        padding: 0;
+        margin-top: 20px;
+    }
+    .main-title h2{
+        font-size: 2rem;
+    }
+    .about-section {
+        margin-bottom: 80px;
+    }
+    .progress-bars {
+        grid-template-columns: repeat(1,minmax(0,1fr));
+    }
+    .timelines {
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        .timeline-item:nth-child(2){
+            grid-column: 1;
+        }
+    }
 }
