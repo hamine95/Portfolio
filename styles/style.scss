@@ -1,4 +1,10 @@
 // general
+@font-face {
+    font-family: 'SignatureFont';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Agustina Regular'), url('../fonts/Agustina.woff') format('woff');
+    }
 * {
     margin: 0;
     padding: 0;
@@ -607,8 +613,76 @@ main{
     display: none;
 }
 .contact.active{
-    background-color: brown;
+  
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    height: 100vh;
+    .main-title h2{
+        color: var(--color-secondary);
+        
+    }
+    .signature{
+        font-family: 'SignatureFont';
+        position: fixed;
+        top: 0%;
+        left: 0 ;
+        font-size: 3rem;
+        opacity: 0.1;
+    }
+    .container{
+        display: flex;
+        gap: 80px;
+        justify-content: center;
+        .img{
+            width: 40vw;
+            height: 50vh;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .container h2{
+        font-weight: 500;
+    }
+    .Contact-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .logo-container{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-around;
+        .logo{
+            border-radius: 50%;
+            padding: 1rem;
+            cursor: pointer;
+
+            i{
+                font-size: 2rem;
+            }
+        }
+        .github{
+            background-color: #000;
+        }
+        .linkedin{
+            background-color: rgb(0, 119, 181);
+        }
+        .email{
+            background-color: #0072C6;
+        }
+        .whatsapp{
+            background-color: #25D366;
+        }
+        .logo:hover{
+            background-color: #0047AB;
+        }
+    }
+    
 }
 // end
 @import './media'

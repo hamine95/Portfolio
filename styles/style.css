@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "SignatureFont";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Agustina Regular"), url("../fonts/Agustina.woff") format("woff");
+}
 * {
   margin: 0;
   padding: 0;
@@ -574,8 +580,72 @@ main {
 }
 
 .contact.active {
-  background-color: brown;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  height: 100vh;
+}
+.contact.active .main-title h2 {
+  color: var(--color-secondary);
+}
+.contact.active .signature {
+  font-family: "SignatureFont";
+  position: fixed;
+  top: 0%;
+  left: 0;
+  font-size: 3rem;
+  opacity: 0.1;
+}
+.contact.active .container {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+}
+.contact.active .container .img {
+  width: 40vw;
+  height: 50vh;
+}
+.contact.active .container .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.contact.active .container h2 {
+  font-weight: 500;
+}
+.contact.active .Contact-container {
+  display: flex;
+  flex-direction: column;
+}
+.contact.active .logo-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.contact.active .logo-container .logo {
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+}
+.contact.active .logo-container .logo i {
+  font-size: 2rem;
+}
+.contact.active .logo-container .github {
+  background-color: #000;
+}
+.contact.active .logo-container .linkedin {
+  background-color: rgb(0, 119, 181);
+}
+.contact.active .logo-container .email {
+  background-color: #0072C6;
+}
+.contact.active .logo-container .whatsapp {
+  background-color: #25D366;
+}
+.contact.active .logo-container .logo:hover {
+  background-color: #0047AB;
 }
 
 @media screen and (max-width: 600px) {
