@@ -64,4 +64,10 @@
             grid-column: 1;
         }
     }
+    .portfolios {
+        grid-template-columns: repeat(1,minmax(0,1fr));
+    }
+    .portfolio.active {
+        margin-bottom: 80px;
+    }
 }
