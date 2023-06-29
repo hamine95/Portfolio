@@ -682,6 +682,12 @@ main {
 }
 
 @media screen and (max-width: 950px) {
+  .portfolios {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .portfolio.active {
+    margin-bottom: 80px;
+  }
   header {
     z-index: 2;
     position: fixed;
@@ -758,12 +764,6 @@ main {
   }
   .timelines .timeline-item:nth-child(3) {
     grid-row: 3;
-  }
-  .portfolios {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-  .portfolio.active {
-    margin-bottom: 80px;
   }
   .contact.active {
     margin-top: 80px;

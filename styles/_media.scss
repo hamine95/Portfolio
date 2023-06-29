@@ -1,4 +1,10 @@
 @media screen and (max-width:950px) {
+    .portfolios {
+        grid-template-columns: repeat(1,minmax(0,1fr));
+    }
+    .portfolio.active {
+        margin-bottom: 80px;
+    }
     header{
         z-index: 2;
         position: fixed;
@@ -82,12 +88,7 @@
             grid-row: 3;
         }
     }
-    .portfolios {
-        grid-template-columns: repeat(1,minmax(0,1fr));
-    }
-    .portfolio.active {
-        margin-bottom: 80px;
-    }
+    
 
     .contact.active {
         margin-top: 80px;

@@ -83,6 +83,14 @@ window.onload= function(){
     setTimeout(TypeWriter,900);
     document.getElementById("switch-mode").addEventListener("click",()=>{
         document.body.classList.toggle("light-mode")
+        var portfolioPic=document.getElementById("portfolioPic")
+        if(Array.from(document.body.classList).includes("light-mode"))
+        {
+            
+            portfolioPic.src="img/myportfolio2.png"
+        }else{
+            portfolioPic.src="img/myportfolio.png"
+        }
     })
     
 }
